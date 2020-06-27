@@ -9,7 +9,7 @@ Visualization of COVID-19 stats data from
 
 - ./client : Browser app to view graphs of daily data
 - demo video :
-  https://secure.medcampus.net/covid19/video/2020-05-26-covid19-visual.mov
+  https://www.youtube.com/watch?v=pRV5CIoGmLE
 - site:
   https://secure.medcampus.net/covid19/a0/
 

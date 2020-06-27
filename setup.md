@@ -59,6 +59,15 @@ yarn start
 
 ### Publish client
 
+Build the latest version of client.
+
+```bash
+bin/build.sh
+```
+
+Deploy build output.
+Edit script for your deploy site.
+
 ```bash
 bin/pub-html.sh
 ```
