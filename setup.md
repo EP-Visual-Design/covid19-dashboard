@@ -74,6 +74,8 @@ bin/pub-html.sh
 
 ## Express server Development
 
+Express server used yet in the COVID-19 Public edition
+
 ### express server
 
 Start the local express server for managing database content.
