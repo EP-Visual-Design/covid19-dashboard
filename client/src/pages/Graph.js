@@ -455,6 +455,7 @@ const Graph = () => {
           />
           <Menu.Item
             name="softbody"
+            content="p5js"
             active={bottomTab === 'softbody'}
             onClick={handleBottomTab}
           />

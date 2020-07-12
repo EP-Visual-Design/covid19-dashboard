@@ -5,6 +5,14 @@ import React from 'react';
 const AboutTab = () => {
   return (
     <div style={{ marginTop: '1rem' }}>
+      <a
+        href="http://www.johnhenrythompson.com/7-covid19-visual"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        http://www.johnhenrythompson.com/7-covid19-visual
+      </a>
+
       <p>
         <b>Purpose:</b> <br />
         More than numbers, I hope this site will help contribute to answering

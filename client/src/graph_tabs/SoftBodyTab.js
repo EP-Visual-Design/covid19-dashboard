@@ -131,7 +131,11 @@ const SoftBodyTab = (props) => {
 
   return (
     <div id="softbody_div">
-      <h3>
+      <p>
+        Example of using p5js to visualize data. <br />
+        "...p5.js is a JavaScript library for creative coding, <br />
+        with a focus on making coding accessible and inclusive <br /> for
+        artists, designers, educators, beginners ..." <br />
         <a
           href="https://p5js.org/examples/simulate-soft-body.html"
           target="_blank"
@@ -139,7 +143,7 @@ const SoftBodyTab = (props) => {
         >
           https://p5js.org/examples/simulate-soft-body.html
         </a>
-      </h3>
+      </p>
       <Grid>
         <Grid.Row style={{ paddingLeft: 16 }}>
           <Button

@@ -15,6 +15,10 @@ const World = ({ pie_data, opacity }) => {
   const barslices = pie_data[1].slices.concat().reverse();
   orderColors_pie(pieslices);
   // console.log('World items', pie_data);
+  console.log('World pieslices', pieslices);
+  console.log('World barslices', barslices);
+  let other = '';
+  if (barslices.length > 0) other = barslices[0].label.split('\n')[0];
   return (
     <div>
       <div style={{ display: 'flex', flexWrap: 'wrap', opacity }}>
@@ -35,6 +39,7 @@ const World = ({ pie_data, opacity }) => {
           theme={material}
           data={barslices}
         />
+        {other} are totals from other countries not shown on the graphs.
       </div>
     </div>
   );

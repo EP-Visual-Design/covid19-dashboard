@@ -16,6 +16,7 @@ const FocusTab = (props) => {
   } = props.actions;
   return (
     <Grid>
+      <Grid.Row>Focus the graph on a selected country</Grid.Row>
       <Grid.Row>
         <Button size="mini" compact onClick={showWorldAction}>
           Focus World
@@ -57,13 +58,16 @@ const FocusTab = (props) => {
         <Button size="mini" compact onClick={findFirstDate}>
           First {uiprop}
         </Button>
-        <Button size="mini" compact onClick={findLastestDate}>
-          Latest
-        </Button>
-        <Button size="mini" compact onClick={showStatsJSON}>
+        Jump to date of first occurrence.
+        {/* <Button size="mini" compact onClick={showStatsJSON}>
           Debug
-        </Button>
+        </Button> */}
       </Grid.Row>
+      <Button size="mini" compact onClick={findLastestDate}>
+        Latest
+      </Button>
+      Jump to latest date.
+      <Grid.Row style={{ paddingTop: '0rem' }}></Grid.Row>
     </Grid>
   );
 };

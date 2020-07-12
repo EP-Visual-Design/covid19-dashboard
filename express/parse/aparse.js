@@ -17,7 +17,6 @@ const { rename_item } = require('./country');
 
 const daily_dir =
   '../../COVID-19-JHU/csse_covid_19_data/csse_covid_19_daily_reports/';
-// const store_dir = '../../store/stats/';
 const store_dir = '../../client/public/stats/';
 const store_path_country = path.resolve(store_dir, 'country');
 const store_path_detail = path.resolve(store_dir, 'detail');

@@ -13,9 +13,7 @@ Visualization of COVID-19 stats data from
 - site:
   https://secure.medcampus.net/covid19/a0/
 
-- ./express : express server to deliver JSON data
-
-- ./client/public/stats : JSON stats from COVID-19-JHU site
+- ./client/public/stats : JSON stats from COVID-19-JHU site as static files
 
   - ./country/2020-01-22.json - daily summary stats by country
   - ...
@@ -30,7 +28,8 @@ Visualization of COVID-19 stats data from
 
 - ./setup.md : Setup instructions to run locally client and express server
 
-- TODO items for discussion
+- ./express : express server to deliver JSON data dynamically
+  Not used yet in the COVID-19 Public edition
 
 - Other visualization sites:
   - https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6
