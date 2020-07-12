@@ -790,7 +790,8 @@
   {
     "Country_Region": "Lesotho",
     "first_date": {
-      "Cases": "2020-05-13"
+      "Cases": "2020-05-13",
+      "Deaths": "2020-07-09"
     }
   },
   {
@@ -967,7 +968,8 @@
   {
     "Country_Region": "Namibia",
     "first_date": {
-      "Cases": "2020-03-14"
+      "Cases": "2020-03-14",
+      "Deaths": "2020-07-10"
     }
   },
   {
