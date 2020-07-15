@@ -168,6 +168,18 @@
     }
   },
   {
+    "Country_Region": "Peru",
+    "totals": {
+      "Cases": 178165,
+      "Deaths": 4767,
+      "Recovered": 69257
+    },
+    "daily": {
+      "Cases": 8126,
+      "Deaths": 133
+    }
+  },
+  {
     "Country_Region": "China",
     "totals": {
       "Cases": 84161,
@@ -176,18 +188,6 @@
     },
     "daily": {
       "Cases": 7,
-      "Deaths": 0
-    }
-  },
-  {
-    "Country_Region": "Peru",
-    "totals": {
-      "Cases": 170039,
-      "Deaths": 4634,
-      "Recovered": 69257
-    },
-    "daily": {
-      "Cases": 0,
       "Deaths": 0
     }
   },
