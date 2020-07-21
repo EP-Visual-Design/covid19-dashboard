@@ -1071,7 +1071,8 @@
   {
     "Country_Region": "Papua New Guinea",
     "first_date": {
-      "Cases": "2020-03-20"
+      "Cases": "2020-03-20",
+      "Deaths": "2020-07-20"
     }
   },
   {
