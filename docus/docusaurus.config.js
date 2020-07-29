@@ -1,6 +1,6 @@
 module.exports = {
   title: 'Covid-19 Dashboard',
-  tagline: 'More than numbers, we hope to help answering essential questions.',
+  tagline: 'More than numbers, we hope to help answer essential questions.',
   url: 'https://github.com/EP-Visual-Design/covid19-dashboard-public',
   baseUrl: '/covid19-dashboard-public/',
   // baseUrl: '/',
