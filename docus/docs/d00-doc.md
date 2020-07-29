@@ -1,13 +1,13 @@
 ---
 id: d00-doc
-title: Site
+title: Dashboard
 ---
 
-## Covid19 Visual Web Site
+## Covid19 Dashboard
 
-A web site to visualize covid-19 statistics from John Hopkins University.  
-The site is updated daily.  
-[https://epvisual.com/covid19-dashboard/a0/](https://epvisual.com/covid19-dashboard/a0/)
+The Covid19 Dashboard visualizes covid-19 statistics publish by John Hopkins University.  
+[https://epvisual.com/covid19-dashboard/a0/](https://epvisual.com/covid19-dashboard/a0/)  
+The site is hosted by [epvisual.com](https://epvisual.com/) and updated daily.
 
 Video explainer for site:  
 [https://www.youtube.com/watch?v=pRV5CIoGmLE](https://www.youtube.com/watch?v=pRV5CIoGmLE)
