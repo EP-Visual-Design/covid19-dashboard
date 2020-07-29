@@ -16,7 +16,7 @@ const FocusTab = (props) => {
   } = props.actions;
   return (
     <Grid>
-      <Grid.Row>Focus the graph on a selected country</Grid.Row>
+      <Grid.Row>Focus the graph on a selected region</Grid.Row>
       <Grid.Row>
         <Button size="mini" compact onClick={showWorldAction}>
           Focus World

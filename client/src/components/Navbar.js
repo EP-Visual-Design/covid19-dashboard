@@ -117,7 +117,7 @@ const Navbar = (props) => {
     <>
       <Menu inverted style={{ borderRadius: '0', marginTop: '0' }}>
         <Menu.Item name="dash" onClick={handleDash}>
-          COVID-19 Visual &nbsp;
+          Covid19-Dashboard &nbsp;
           <Version />
         </Menu.Item>
         {process.env.REACT_APP_C19_CONTACT && (

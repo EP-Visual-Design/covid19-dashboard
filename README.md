@@ -1,6 +1,6 @@
 # COVID-19 Visualization
 
-Visualization of COVID-19 stats data from
+Visualization of COVID-19 statistics from
 
 - "2019 Novel Coronavirus COVID-19 (2019-nCoV) Data Repository by Johns Hopkins CSSE"
 - https://github.com/CSSEGISandData/COVID-19
@@ -11,7 +11,7 @@ Visualization of COVID-19 stats data from
 - demo video :
   https://www.youtube.com/watch?v=pRV5CIoGmLE
 - site:
-  https://secure.medcampus.net/covid19/a0/
+  https://epvisual.com/covid19-dashboard
 
 - ./client/public/stats : JSON stats from COVID-19-JHU site as static files
 

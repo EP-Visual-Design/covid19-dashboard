@@ -441,6 +441,7 @@ const Graph = () => {
           <Menu.Item
             name="places"
             active={bottomTab === 'places'}
+            content="Regions"
             onClick={handleBottomTab}
           />
           <Menu.Item
@@ -466,7 +467,11 @@ const Graph = () => {
           />
         </Menu>
         {bottomTab === 'places' && (
-          <CountryDataTable items={sortedItems} propTitle={uiprop_s} />
+          <CountryDataTable
+            items={sortedItems}
+            propTitle={uisum + ' ' + uiprop_s}
+            pie_data={pieData}
+          />
         )}
         {bottomTab === 'purpose' && <AboutTab />}
         {bottomTab === 'focus' && <FocusTab actions={focus_actions} />}

@@ -1,12 +1,12 @@
 {
-  "name": "covid-19-visual",
-  "version": "0.0.163",
+  "name": "covid19-dashboard",
+  "version": "0.0.7",
   "private": true,
   "author": {
     "name": "John Henry Thompson",
     "url": "http://johnhenrythompson.com"
   },
-  "homepage": "/covid19/a0/",
+  "homepage": "/covid19-dashboard/a0/",
   "repository": {
     "type": "git",
     "url": ""

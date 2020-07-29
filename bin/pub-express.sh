@@ -1,14 +1,14 @@
 #!/bin/bash
 cd ${0%/*}
 
-# Publish covid19 express app to secure.medcampus.net
+# Publish covid19 express app to epvisual.com
 
 source=../express
 
 cd $source
 npm version patch
 
-host=epdev@secure.medcampus.net
+host=epdev@epvisual.com
 rpath=/home/epdev/covid19/express
 
 delete=--delete

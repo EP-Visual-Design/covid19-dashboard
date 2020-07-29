@@ -1,7 +1,7 @@
 #!/bin/bash
 cd ${0%/*}
 
-# Publish covid19 html app to secure.medcampus.net
+# Publish covid19 html app to epvisual.com
 
 delete=--delete
 test=
@@ -9,9 +9,9 @@ test=
 verbose=
 # verbose=v
 
-host=epdev@secure.medcampus.net
-siteroot=/var/www/sites/secure.medcampus.net
-homepage=covid19/a0
+host=epdev@epvisual.com
+siteroot=/var/www/sites/epvisual.com
+homepage=covid19-dashboard/a0
 rpath="${siteroot}/${homepage}"
 
 rdest=$host:${rpath}
@@ -35,4 +35,4 @@ ssh $host ls -la $rpath/index.html
 grep \"version\" ../client/package.json
 
 echo
-echo "open https://secure.medcampus.net/${homepage}"
+echo "open https://epvisual.com/${homepage}"

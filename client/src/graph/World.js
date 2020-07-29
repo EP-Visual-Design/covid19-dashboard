@@ -18,7 +18,14 @@ const World = ({ pie_data, opacity }) => {
   console.log('World pieslices', pieslices);
   console.log('World barslices', barslices);
   let other = '';
-  if (barslices.length > 0) other = barslices[0].label.split('\n')[0];
+  if (barslices.length > 0) {
+    // other = barslices[0].label.split('\n')[0];
+    const ent = barslices[0];
+    const label = ent.x.substring(0, 1);
+    // console.log('World ent', ent);
+    other =
+      label + ' Total for the ' + ent.count + ' regions not shown on graph';
+  }
   return (
     <div>
       <div style={{ display: 'flex', flexWrap: 'wrap', opacity }}>
@@ -39,7 +46,7 @@ const World = ({ pie_data, opacity }) => {
           theme={material}
           data={barslices}
         />
-        {other} are totals from other countries not shown on the graphs.
+        {other}
       </div>
     </div>
   );

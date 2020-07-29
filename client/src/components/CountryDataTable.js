@@ -5,6 +5,7 @@ import slug from 'slug';
 import FlagIcon from '../components/FlagIcon';
 import getCountryCode from '../js/getCountryCode';
 import StyledCountryDataTable from '../styles/StyledCountryDataTable';
+import { colorfor } from '../graph/colors';
 
 function percentFormat(num) {
   // num = Math.round((val / stats_total) * 1000) / 10;
@@ -21,11 +22,19 @@ function percentFormat(num) {
 }
 
 const Rows = (props) => {
-  const { items } = props;
-  const rows = items.map((country) => {
+  const { items, nslices } = props;
+  const rows = items.map((country, index) => {
     const { Country_Region, propValue, propPercent } = country;
     const slugKey = `tr-${slug(Country_Region).toLowerCase()}`;
     const countryCode = getCountryCode(Country_Region);
+    let style = null;
+    if (index < nslices - 1) {
+      const color = colorfor(index);
+      style = { backgroundColor: color };
+    } else if (nslices > 0) {
+      const color = colorfor(nslices - 1);
+      style = { backgroundColor: color };
+    }
     return (
       <tr key={slugKey}>
         <td className="region">
@@ -39,7 +48,9 @@ const Rows = (props) => {
             thousandSeparator={true}
           />
         </td>
-        <td className="percent">{percentFormat(propPercent)}</td>
+        <td className="percent" style={style}>
+          {percentFormat(propPercent)}
+        </td>
       </tr>
     );
   });
@@ -47,20 +58,23 @@ const Rows = (props) => {
 };
 
 const CountryDataTable = (props) => {
-  // const { items, propTitle } = props;
-  const { items } = props;
+  const { items, propTitle, pie_data } = props;
+  const pieslices = pie_data[0].slices;
+  console.log('pieslices.length', pieslices.length);
+  // const { items } = props;
   // console.log('CountryDataTable items', items);
   return (
     <StyledCountryDataTable>
-      {/* <thead>
+      <thead>
         <tr>
-          <th>&nbsp;</th>
+          {/* <th width="60%">Region</th> */}
+          <th>Region</th>
           <th>{propTitle}</th>
-          <th>&nbsp;</th>
+          <th width="10%">Percent</th>
         </tr>
-      </thead> */}
+      </thead>
       <tbody>
-        <Rows items={items} />
+        <Rows items={items} nslices={pieslices.length} />
       </tbody>
     </StyledCountryDataTable>
   );

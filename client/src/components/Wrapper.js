@@ -18,7 +18,7 @@ const Wrapper = () => (
   <>
     <Normalize />
     <GlobalStyle />
-    <Router history={history} basename="/pand">
+    <Router history={history} basename="/covid19-dashboard">
       <ScrollToTop>
         <Navbar />
         <Switch>
