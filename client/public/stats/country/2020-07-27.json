@@ -2,13 +2,13 @@
   {
     "Country_Region": "United States",
     "totals": {
-      "Cases": 4290259,
-      "Deaths": 148011,
+      "Cases": 4290337,
+      "Deaths": 148012,
       "Recovered": 1325804
     },
     "daily": {
-      "Cases": 56336,
-      "Deaths": 1076
+      "Cases": 56414,
+      "Deaths": 1077
     }
   },
   {
