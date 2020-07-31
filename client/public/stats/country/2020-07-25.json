@@ -39,12 +39,12 @@
     "Country_Region": "Mexico",
     "totals": {
       "Cases": 385036,
-      "Deaths": 42645,
+      "Deaths": 43374,
       "Recovered": 288819
     },
     "daily": {
       "Cases": 6751,
-      "Deaths": 0
+      "Deaths": 729
     }
   },
   {

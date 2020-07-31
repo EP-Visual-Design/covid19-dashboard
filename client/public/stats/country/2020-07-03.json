@@ -15,12 +15,12 @@
     "Country_Region": "Brazil",
     "totals": {
       "Cases": 1539081,
-      "Deaths": 61884,
+      "Deaths": 63174,
       "Recovered": 984615
     },
     "daily": {
       "Cases": 42223,
-      "Deaths": 0
+      "Deaths": 1290
     }
   },
   {
