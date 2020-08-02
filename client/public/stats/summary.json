@@ -473,7 +473,8 @@
   {
     "Country_Region": "Fiji",
     "first_date": {
-      "Cases": "2020-03-19"
+      "Cases": "2020-03-19",
+      "Deaths": "2020-07-31"
     }
   },
   {
@@ -1478,7 +1479,8 @@
   {
     "Country_Region": "Vietnam",
     "first_date": {
-      "Cases": "2020-01-23"
+      "Cases": "2020-01-23",
+      "Deaths": "2020-07-31"
     }
   },
   {
