@@ -369,7 +369,7 @@ const Graph = () => {
   };
   const to_active = sumFocus === 'totals';
   const da_active = sumFocus === 'daily';
-  const uisum = sumFocus === 'totals' ? 'Totals' : 'Daily';
+  const uisum = sumFocus === 'totals' ? 'Total' : 'Daily';
 
   const updateSlider = (key) => {
     // console.log('updateSlider key', key);
@@ -386,7 +386,7 @@ const Graph = () => {
         </Dimmer> */}
         <Loader active={loaderActive} inline></Loader>
         <Header as="h3">
-          {uisum} {uiprop_s}: {pieData[0].stats_total} on {dateFocus}
+          Worldwide {uisum} {uiprop_s}: {pieData[0].stats_total} on {dateFocus}
         </Header>
         {/* {bottomTab !== 'softbody' && <World pie_data={pieData}></World>} */}
         <World pie_data={pieData} opacity={graphOpacity} />
@@ -406,7 +406,7 @@ const Graph = () => {
             <StyledControlRow>
               <Button.Group>
                 <Button size="mini" onClick={selectTotals} active={to_active}>
-                  Totals
+                  Total
                 </Button>
                 <Button size="mini" onClick={selectDaily} active={da_active}>
                   Daily
