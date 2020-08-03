@@ -17,7 +17,7 @@ const StyledCountryDataTable = styled.table`
   thead {
     background-color: var(--color-background);
     position: sticky;
-    top: 3rem;
+    top: 0;
     z-index: 10;
   }
 
@@ -30,9 +30,9 @@ const StyledCountryDataTable = styled.table`
 
     .region {
       /* max-width: 140px; */
-      width: 140px;
-      white-space: nowrap;
-      overflow: hidden;
+      /* width: 140px; */
+      /* white-space: nowrap;
+      overflow: hidden; */
       text-overflow: ellipsis;
     }
   }

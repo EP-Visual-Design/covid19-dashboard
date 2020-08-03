@@ -1,11 +1,10 @@
-//
 import React, { useRef } from 'react';
 import { Button, Grid } from 'semantic-ui-react';
-
+import styled from 'styled-components';
+import useLocalStorage from '../hooks/useLocalStorage';
 // import Sketch from '../../node_modules/react-p5';
 // import Sketch from '../react-p5';
 import Sketch from '../p5js/Sketch.js';
-import useLocalStorage from '../hooks/useLocalStorage';
 import SoftBody from './SoftBody';
 
 // Adapted from
@@ -130,39 +129,55 @@ const SoftBodyTab = (props) => {
   };
 
   return (
-    <div id="softbody_div">
-      <p>
-        Example of using p5js to visualize data. <br />
-        "...p5.js is a JavaScript library for creative coding, <br />
-        with a focus on making coding accessible and inclusive <br /> for
-        artists, designers, educators, beginners ..." <br />
-        <a
-          href="https://p5js.org/examples/simulate-soft-body.html"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          https://p5js.org/examples/simulate-soft-body.html
-        </a>
-      </p>
-      <Grid>
-        <Grid.Row style={{ paddingLeft: 16 }}>
-          <Button
-            size="mini"
-            onClick={selectWindow}
-            active={softView === 'window'}
+    <StyledDiv>
+      <div id="softbody_div">
+        <p>Example of using p5js to visualize data.</p>
+        <blockquote>
+          "&hellip;p5.js is a JavaScript library for creative coding, with a
+          focus on making coding accessible and inclusive for artists,
+          designers, educators, beginners &hellip;"
+        </blockquote>
+        <p>
+          <a
+            href="https://p5js.org/examples/simulate-soft-body.html"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Fill
-          </Button>
-          <Button size="mini" onClick={selectSplit} active={split}>
-            Split
-          </Button>
-        </Grid.Row>
-      </Grid>
-      <div style={fullWindowStyle}>
-        <Sketch setup={setup} draw={draw} />
+            https://p5js.org/examples/simulate-soft-body.html
+          </a>
+        </p>
+        <Grid>
+          <Grid.Row style={{ paddingLeft: 16 }}>
+            <Button
+              size="mini"
+              onClick={selectWindow}
+              active={softView === 'window'}
+            >
+              Fill
+            </Button>
+            <Button size="mini" onClick={selectSplit} active={split}>
+              Split
+            </Button>
+          </Grid.Row>
+        </Grid>
+        <div style={fullWindowStyle}>
+          <Sketch setup={setup} draw={draw} />
+        </div>
       </div>
-    </div>
+    </StyledDiv>
   );
 };
+
+const StyledDiv = styled.div`
+  max-width: 75ch;
+  padding: 1.5rem;
+
+  blockquote {
+    font-style: italic;
+    color: dark-gray;
+    margin-left: 0;
+    margin-right: 0;
+  }
+`;
 
 export default SoftBodyTab;

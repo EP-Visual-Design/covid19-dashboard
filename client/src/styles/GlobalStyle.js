@@ -58,9 +58,9 @@ const GlobalStyle = createGlobalStyle`
     --color-white: hsla(104, 100%, 100%, 1.000);
     --color-yellow: hsla(48, 97%, 52%, 1.000);
 
-    /* 
+    /*
     --color-background: var(--color-black);
-    --color-foreground: var(--color-white); 
+    --color-foreground: var(--color-white);
     */
     --color-background: var(--color-white);
     --color-foreground: var(--color-black);
@@ -80,9 +80,9 @@ const GlobalStyle = createGlobalStyle`
       font-variant-numeric: oldstyl-nums proportional-nums;
     }
 
-    @media screen and (min-width: 80em) {
+    /* @media screen and (min-width: 80em) {
       font-size: 150%;
-    }
+    } */
   }
 
   body {
@@ -149,6 +149,8 @@ const GlobalStyle = createGlobalStyle`
 
   .no-break { hyphens: none; }
   .numbers { letter-spacing: .01em; }
+
+  .ui.search.dropdown { min-width: auto; }
 `;
 
 export default GlobalStyle;

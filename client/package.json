@@ -66,5 +66,10 @@
   "prettier": {
     "singleQuote": true,
     "tabWidth": 2
+  },
+  "importSort": {
+    ".js, .jsx": {
+      "style": "module-compact"
+    }
   }
 }

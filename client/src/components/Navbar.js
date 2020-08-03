@@ -1,11 +1,11 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
 import { Icon, Menu, Select } from 'semantic-ui-react';
 import { version } from '../../package.json';
-import { history } from '../history';
 // import Authentication from '../components/Authentication';
 import { setApp, signOut } from '../actions';
+import { history } from '../history';
 
 const Navbar = (props) => {
   const {
@@ -133,7 +133,7 @@ const Navbar = (props) => {
         {isSignedIn && <RenderAdminButton />}
         <Menu.Menu position="right">
           <RenderAppSelect />
-          <Menu.Item>{email}</Menu.Item>
+          {email && <Menu.Item>{email}</Menu.Item>}
           <SignMenu />
         </Menu.Menu>
       </Menu>
