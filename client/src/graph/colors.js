@@ -1,30 +1,22 @@
-//
-// const colors = ['tomato', 'orange', 'gold', 'cyan', 'navy'];
-// built in color scales: "grayscale", "qualitative", "heatmap", "warm", "cool", "red", "green", "blue".
-// const colors = 'qualitative';
-
-const yellow200 = '#FFF59D';
-const deepOrange600 = '#F4511E';
-const lime300 = '#DCE775';
-const lightGreen500 = '#8BC34A';
-const teal700 = '#00796B';
-const cyan900 = '#006064';
-const red = '#C00000';
-const green = '#00FF00';
-// const blue = '#202080';
-// const blue = '#000080';
-const gray = '#80D0D0';
+const blueDark = '#003f5c';
+const blueLight = '#2f4b7c';
+const purple = '#665191';
+const fuschia = '#a05195';
+const pink = '#d45087';
+const red = '#f95d6a';
+const orange = '#ff7c43';
+const yellow = '#ffa600';
+const gray = '#80d0d0';
 
 export const colors = [
-  cyan900,
-  teal700,
-  lightGreen500,
-  lime300,
-  yellow200,
-  deepOrange600,
-  green,
+  blueDark,
+  blueLight,
+  purple,
+  fuschia,
+  pink,
   red,
-  // blue, // Color for lower sum
+  orange,
+  yellow,
   gray,
 ];
 
@@ -33,9 +25,9 @@ export const colors = [
 const assigned = [];
 
 const prefered = {
-  'United States': { color: red, xval: 'United States' },
-  China: { color: yellow200, xval: 'China' },
-  Jamaica: { color: green, xval: 'Jamaica' },
+  'United States': { color: blueDark, xval: 'United States' },
+  China: { color: yellow, xval: 'China' },
+  Jamaica: { color: pink, xval: 'Jamaica' },
   // [lower_label]: { color: blue, xval: lower_label },
 };
 

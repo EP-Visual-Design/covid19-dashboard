@@ -1,6 +1,7 @@
-//
 import React from 'react';
-import { Grid, Button } from 'semantic-ui-react';
+import { Button, Grid } from 'semantic-ui-react';
+import styled from 'styled-components';
+import uuidv4 from 'uuid';
 
 const FocusTab = (props) => {
   const {
@@ -14,62 +15,71 @@ const FocusTab = (props) => {
     showCountryAction,
     focusIndex,
   } = props.actions;
+
+  const shortcuts = [1, 0];
+
   return (
-    <Grid>
-      <Grid.Row>Focus the graph on a selected region</Grid.Row>
-      <Grid.Row>
-        <Button size="mini" compact onClick={showWorldAction}>
-          Focus World
-        </Button>
-        <CountrySelect />
-        <Button
-          size="mini"
-          compact
-          onClick={() => {
-            showCountryAction(0);
-          }}
-          active={focusIndex === 0}
-          style={{ marginLeft: 4 }}
-        >
-          {focusCountries[0]}
-        </Button>
-        <Button
-          size="mini"
-          compact
-          onClick={() => {
-            showCountryAction(1);
-          }}
-          active={focusIndex === 1}
-        >
-          {focusCountries[1]}
-        </Button>
-        <Button
-          size="mini"
-          compact
-          onClick={() => {
-            showCountryAction(2);
-          }}
-          active={focusIndex === 2}
-        >
-          {focusCountries[2]}
-        </Button>
-      </Grid.Row>
-      <Grid.Row style={{ paddingTop: '0rem' }}>
-        <Button size="mini" compact onClick={findFirstDate}>
-          First {uiprop}
-        </Button>
-        Jump to date of first occurrence.
-        {/* <Button size="mini" compact onClick={showStatsJSON}>
-          Debug
-        </Button> */}
-      </Grid.Row>
-      <Button size="mini" compact onClick={findLastestDate}>
-        Latest
-      </Button>
-      Jump to latest date.
-      <Grid.Row style={{ paddingTop: '0rem' }}></Grid.Row>
-    </Grid>
+    <StyledDiv>
+      <Grid style={{ margin: 0 }}>
+        <Grid.Row>
+          Use these tools to quickly focus the graph on a selected region.
+        </Grid.Row>
+        <Grid.Row>
+          <CountrySelect />
+        </Grid.Row>
+        <Grid.Row style={{ paddingBottom: 0 }}>
+          <p>
+            <b>Quick Access</b>
+          </p>
+        </Grid.Row>
+        <Grid.Row>
+          <div className="quick-access-buttons">
+            <Button onClick={showWorldAction}>World</Button>
+            {shortcuts.map((id) => (
+              <Button
+                active={focusIndex === id}
+                onClick={() => showCountryAction(id)}
+                key={uuidv4()}
+              >
+                {focusCountries[id]}
+              </Button>
+            ))}
+            <Button onClick={findFirstDate}>First {uiprop}</Button>
+            <Button onClick={findLastestDate}>Latest Date</Button>
+          </div>
+        </Grid.Row>
+      </Grid>
+    </StyledDiv>
   );
 };
+
+const StyledDiv = styled.div`
+  padding: 0 1.5rem 1.5rem;
+
+  div.selection {
+    width: 100%;
+    @media screen and (min-width: 48em) {
+      max-width: 18.75rem;
+    }
+  }
+
+  .quick-access-buttons {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+
+    @media screen and (min-width: 48em) {
+      max-width: 18.75rem;
+    }
+
+    button {
+      display: block;
+      margin-bottom: 0.75rem;
+      width: 100%;
+    }
+  }
+`;
 
 export default FocusTab;

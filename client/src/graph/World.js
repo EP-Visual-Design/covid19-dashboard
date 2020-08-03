@@ -1,8 +1,8 @@
-import React from 'react';
-import { VictoryPie, VictoryBar } from 'victory';
-import material from './material';
+import { VictoryBar, VictoryPie } from 'victory';
+import { colorfor, colors, orderColors_pie } from './colors';
 
-import { colors, orderColors_pie, colorfor } from './colors';
+import React from 'react';
+import material from './material';
 
 // const x = item.Country_Region;
 // const y = item.Deaths;
@@ -46,7 +46,7 @@ const World = ({ pie_data, opacity }) => {
           theme={material}
           data={barslices}
         />
-        {other}
+        <p style={{ marginBottom: 8 }}>{other}</p>
       </div>
     </div>
   );

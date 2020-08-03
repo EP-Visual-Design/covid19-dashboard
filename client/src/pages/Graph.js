@@ -1,29 +1,27 @@
-//
-//
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import ReactGA from 'react-ga';
 import {
   Button,
   Container,
   Grid,
-  Select,
   Header,
   Icon,
-  Menu,
   Loader,
+  Menu,
+  Select,
 } from 'semantic-ui-react';
-import ReactGA from 'react-ga';
-
-import useLocalStorage from '../hooks/useLocalStorage';
-import useInterval from '../hooks/useInterval';
+import styled from 'styled-components';
+import CountryDataTable from '../components/CountryDataTable';
+import DateSlider from '../components/DateSlider';
 import World from '../graph/World';
 import extract_slices from '../graph/extract_slices';
-import fetchData from '../js/fetchData';
-import ReferencesTab from '../graph_tabs/ReferencesTab';
-import FocusTab from '../graph_tabs/FocusTab';
 import AboutTab from '../graph_tabs/AboutTab';
-import DateSlider from '../components/DateSlider';
-import CountryDataTable from '../components/CountryDataTable';
+import FocusTab from '../graph_tabs/FocusTab';
+import ReferencesTab from '../graph_tabs/ReferencesTab';
 import SoftBodyTab from '../graph_tabs/SoftBodyTab';
+import useInterval from '../hooks/useInterval';
+import useLocalStorage from '../hooks/useLocalStorage';
+import fetchData from '../js/fetchData';
 
 const nslice = 8;
 const top_label = 'World';
@@ -391,13 +389,11 @@ const Graph = () => {
           {uisum} {uiprop_s}: {pieData[0].stats_total} on {dateFocus}
         </Header>
         {/* {bottomTab !== 'softbody' && <World pie_data={pieData}></World>} */}
-        <World pie_data={pieData} opacity={graphOpacity}></World>
+        <World pie_data={pieData} opacity={graphOpacity} />
         <Grid>
           <Grid.Row
             style={{
-              paddingBottom: 0,
-              paddingLeft: 16,
-              // left and right padding for small devices
+              padding: '0 16px',
             }}
           >
             <DateSlider
@@ -406,38 +402,52 @@ const Graph = () => {
               updateSlider={updateSlider}
             />
           </Grid.Row>
-          <Grid.Row style={{ paddingLeft: 16 }}>
-            <Button.Group style={{ marginRight: 6 }}>
-              <Button size="mini" onClick={selectTotals} active={to_active}>
-                Totals
-              </Button>
-              <Button size="mini" onClick={selectDaily} active={da_active}>
-                Daily
-              </Button>
-            </Button.Group>
-            <Button.Group style={{ marginRight: 6 }}>
-              <Button size="mini" onClick={selectCasesAction} active={cactive}>
-                Cases
-              </Button>
-              <Button size="mini" onClick={selectDeathsAction} active={dactive}>
-                Deaths
-              </Button>
-            </Button.Group>
-            <DateFocusSelect />
-            <Button.Group>
-              <span style={{ marginLeft: 6 }}>
-                <Button size="mini" onClick={previousAction}>
-                  <Icon name="step backward" />
+          <Grid.Row>
+            <StyledControlRow>
+              <Button.Group>
+                <Button size="mini" onClick={selectTotals} active={to_active}>
+                  Totals
                 </Button>
-                <ButtonPlayPause style={{ marginRight: 6 }} />
-                <Button size="mini" onClick={nextAction}>
-                  <Icon name="step forward" />
+                <Button size="mini" onClick={selectDaily} active={da_active}>
+                  Daily
                 </Button>
-              </span>
-            </Button.Group>
+              </Button.Group>
+              <Button.Group>
+                <Button
+                  size="mini"
+                  onClick={selectCasesAction}
+                  active={cactive}
+                >
+                  Cases
+                </Button>
+                <Button
+                  size="mini"
+                  onClick={selectDeathsAction}
+                  active={dactive}
+                >
+                  Deaths
+                </Button>
+              </Button.Group>
+              <div>
+                <DateFocusSelect />
+              </div>
+              <Button.Group>
+                <span>
+                  <Button size="mini" onClick={previousAction}>
+                    <Icon name="step backward" />
+                  </Button>
+                  <ButtonPlayPause />
+                  <Button size="mini" onClick={nextAction}>
+                    <Icon name="step forward" />
+                  </Button>
+                </span>
+              </Button.Group>
+            </StyledControlRow>
           </Grid.Row>
         </Grid>
-        <Menu tabular size="tiny">
+      </Container>
+      <StyledDetailsContainer>
+        <Menu tabular>
           <Menu.Item
             name="places"
             active={bottomTab === 'places'}
@@ -477,9 +487,37 @@ const Graph = () => {
         {bottomTab === 'focus' && <FocusTab actions={focus_actions} />}
         {bottomTab === 'softbody' && <SoftBodyTab pie_data={pieData[0]} />}
         {bottomTab === 'references' && <ReferencesTab />}
-      </Container>
+      </StyledDetailsContainer>
     </>
   );
 };
+
+const StyledDetailsContainer = styled.div`
+  margin: 3rem auto 1.5rem;
+  max-width: 1172px;
+`;
+
+const StyledControlRow = styled.div`
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 1rem;
+  width: 100%;
+
+  @media screen and (min-width: 64em) {
+    justify-content: flex-end;
+
+    .buttons,
+    > div {
+      margin-left: 1.5rem;
+    }
+  }
+
+  .ui {
+    margin-top: 8px;
+  }
+`;
 
 export default Graph;

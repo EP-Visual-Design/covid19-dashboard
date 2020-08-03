@@ -1,11 +1,11 @@
 import React from 'react';
 import NumberFormat from 'react-number-format';
 import slug from 'slug';
-
+import styled from 'styled-components';
 import FlagIcon from '../components/FlagIcon';
+import { colorfor } from '../graph/colors';
 import getCountryCode from '../js/getCountryCode';
 import StyledCountryDataTable from '../styles/StyledCountryDataTable';
-import { colorfor } from '../graph/colors';
 
 function percentFormat(num) {
   // num = Math.round((val / stats_total) * 1000) / 10;
@@ -27,14 +27,11 @@ const Rows = (props) => {
     const { Country_Region, propValue, propPercent } = country;
     const slugKey = `tr-${slug(Country_Region).toLowerCase()}`;
     const countryCode = getCountryCode(Country_Region);
-    let style = null;
-    if (index < nslices - 1) {
-      const color = colorfor(index);
-      style = { backgroundColor: color };
-    } else if (nslices > 0) {
-      const color = colorfor(nslices - 1);
-      style = { backgroundColor: color };
-    }
+    const style = {
+      backgroundColor:
+        index < nslices - 1 ? colorfor(index) : colorfor(nslices - 1),
+    };
+
     return (
       <tr key={slugKey}>
         <td className="region">
@@ -48,8 +45,11 @@ const Rows = (props) => {
             thousandSeparator={true}
           />
         </td>
-        <td className="percent" style={style}>
-          {percentFormat(propPercent)}
+        <td className="percent">
+          <StyledPercentData>
+            {percentFormat(propPercent)}
+            <StyledColorIndicator style={style} />
+          </StyledPercentData>
         </td>
       </tr>
     );
@@ -79,5 +79,16 @@ const CountryDataTable = (props) => {
     </StyledCountryDataTable>
   );
 };
+
+const StyledPercentData = styled.div`
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+`;
+
+const StyledColorIndicator = styled.div`
+  height: 2rem;
+  width: 2rem;
+`;
 
 export default CountryDataTable;
