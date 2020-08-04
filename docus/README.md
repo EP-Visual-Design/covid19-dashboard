@@ -29,7 +29,7 @@ This command generates static content into the `build` directory and can be serv
 ```
 GIT_USER=jhtep yarn deploy
 
-open https://ep-visual-design.github.io/covid19-dashboard-public/
+open https://ep-visual-design.github.io/covid19-dashboard/
 
 ```
 

@@ -1,15 +1,15 @@
 module.exports = {
   title: 'Covid-19 Dashboard',
   tagline: 'More than numbers, we hope to help answer essential questions.',
-  url: 'https://github.com/EP-Visual-Design/covid19-dashboard-public',
-  baseUrl: '/covid19-dashboard-public/',
+  url: 'https://github.com/EP-Visual-Design/covid19-dashboard',
+  baseUrl: '/covid19-document/',
   // baseUrl: '/',
   favicon: 'img/favicon.ico',
   organizationName: 'EP-Visual-Design', // Usually your GitHub org/user name.
-  projectName: 'covid19-dashboard-public', // Usually your repo name.
+  projectName: 'covid19-dashboard', // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: 'covid19-dashboard',
+      title: 'covid19-document',
       logo: {
         alt: 'My Site Logo',
         src: 'img/logo192.png',
@@ -23,8 +23,7 @@ module.exports = {
         },
         { to: 'blog', label: 'Blog', position: 'left' },
         {
-          href:
-            'https://github.com/EP-Visual-Design/covid19-dashboard-public.git',
+          href: 'https://github.com/EP-Visual-Design/covid19-dashboard.git',
           label: 'GitHub',
           position: 'right',
         },
@@ -91,13 +90,13 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
-            'https://github.com/EP-Visual-Design/covid19-dashboard-public/edit/master/edition/docus/',
+            'https://github.com/EP-Visual-Design/covid19-dashboard/edit/master/edition/docus/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/EP-Visual-Design/covid19-dashboard-public/edit/master/edition/docus/',
+            'https://github.com/EP-Visual-Design/covid19-dashboard/edit/master/edition/docus/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
