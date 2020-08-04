@@ -24,7 +24,7 @@ const ReferencesTab = () => {
       anchor: 'Remembering the New Yorkers We’ve Lost to‌ COVID‑19',
       heading: '',
       quote:
-        '...This is a space to remember and honor every person who died...',
+        '"...This is a space to remember and honor every person who died..."',
       url: 'https://projects.thecity.nyc/covid-19-deaths/',
     },
   ];

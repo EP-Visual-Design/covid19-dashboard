@@ -378,6 +378,8 @@ const Graph = () => {
 
   const graphOpacity = bottomTab === 'softbody' ? 0.6 : 1.0;
 
+  const dateFocusShort = dateFocus && dateFocus.substring(5);
+
   return (
     <>
       <Container style={{ marginTop: '1rem' }}>
@@ -386,7 +388,8 @@ const Graph = () => {
         </Dimmer> */}
         <Loader active={loaderActive} inline></Loader>
         <Header as="h3">
-          Worldwide {uisum} {uiprop_s}: {pieData[0].stats_total} on {dateFocus}
+          Worldwide {uisum} {uiprop_s}: {pieData[0].stats_total} on{' '}
+          {dateFocusShort}
         </Header>
         {/* {bottomTab !== 'softbody' && <World pie_data={pieData}></World>} */}
         <World pie_data={pieData} opacity={graphOpacity} />
