@@ -1,5 +1,5 @@
 const blueDark = '#003f5c';
-const blueLight = '#2f4b7c';
+const green = '#488f31';
 const purple = '#665191';
 const fuschia = '#a05195';
 const pink = '#d45087';
@@ -10,7 +10,7 @@ const gray = '#80d0d0';
 
 export const colors = [
   blueDark,
-  blueLight,
+  green,
   purple,
   fuschia,
   pink,
