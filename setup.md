@@ -50,7 +50,7 @@ Start the local dev server for UI development.
 Uses port 3000.
 
 ```bash
-cd ./client
+cd <your-covid19-repo>/client
 # install dependencies (one time only)
 yarn
 # start the dev server
@@ -59,14 +59,16 @@ yarn start
 
 ### Publish client
 
-Build the latest version of client.
+Build the latest version for local client.
 
 ```bash
 bin/build.sh
 ```
 
-Deploy build output.
-Edit script for your deploy site.
+***
+
+### Deploy build output too online site.
+**Edit script for your deploy site.**
 
 ```bash
 bin/pub-html.sh
@@ -108,7 +110,7 @@ npm version patch
 
 # Install GPG Suite
 # Uncheck GPG Mail and GPG Services
-# Opted out of uploading public key
+# Uncheck GPG Keychain Service
 open https://gpgtools.org
 
 # Verify gpg installed
