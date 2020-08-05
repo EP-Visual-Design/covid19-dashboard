@@ -1,9 +1,7 @@
 ---
-id: d03-doc
+id: d03-Inspiration
 title: Inspiration
 ---
-
-## Inspiration
 
 [NYC Comptroller Report on Frontline Workers](https://comptroller.nyc.gov/reports/new-york-citys-frontline-workers/)  
 "...workers whom we trust with our health, our nourishment, our loved ones, and our lives are too often ignored, underpaid, and overworked..."

@@ -1,6 +1,7 @@
 ---
-id: d04-doc
-title: Other Dashboards
+id: d04-Dashboards
+title: Dashboards
+sidebar_label: Dashboards
 ---
 
 ## Other Covid19 Dashboards

@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'Covid-19 Dashboard',
+  title: 'Covid-19 Document',
   tagline: 'More than numbers, we hope to help answer essential questions.',
   url: 'https://github.com/EP-Visual-Design/covid19-dashboard',
   baseUrl: '/covid19-document/',
@@ -86,7 +86,7 @@ module.exports = {
       {
         docs: {
           // It is recommended to set document id as docs home page (`docs/` path).
-          homePageId: 'd00-doc',
+          homePageId: 'd01-intro',
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:

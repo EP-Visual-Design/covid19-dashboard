@@ -1,12 +1,12 @@
 module.exports = {
   someSidebar: {
     Pages: [
-      'd00-doc',
-      'd02-doc',
-      'd03-doc',
-      'd03.1-doc',
-      'd04-doc',
-      'd05-doc',
+      'd01-intro',
+      'd02-roadmap',
+      'd03-Inspiration',
+      'd03.1-Community',
+      'd04-Dashboards',
+      'd05-code',
       'd99-style',
       // { Sub1: ['Sub1/sub1', 'Sub1/sub2'] },
     ],
