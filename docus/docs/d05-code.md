@@ -4,7 +4,7 @@ title: Code
 ---
 
 Technologies behind the site.
-Coding langugaes, libraries, and tools are used to build the Covid19 Dashboard.
+Coding langugaes, libraries, and tools used to build the Covid19 Dashboard.
 
 ## Code
 

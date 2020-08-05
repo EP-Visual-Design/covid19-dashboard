@@ -5,6 +5,12 @@ import uuidv4 from 'uuid';
 const ReferencesTab = () => {
   const data = [
     {
+      anchor: 'Covid19 Document',
+      heading: 'Why and How this site is built: ',
+      quote: '',
+      url: 'https://epvisual.com/covid19-document/',
+    },
+    {
       anchor:
         '2019 Novel Coronavirus COVID-19 (2019-nCoV) Data Repository by Johns Hopkins CSSE',
       heading: 'Data source: ',

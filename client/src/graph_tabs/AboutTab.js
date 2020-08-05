@@ -4,15 +4,6 @@ import styled from 'styled-components';
 const AboutTab = () => {
   return (
     <StyledDiv>
-      <p>
-        <a
-          href="http://www.johnhenrythompson.com/7-covid19-visual"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          COVID-19 Visual
-        </a>
-      </p>
       <section aria-labelledby="heading-purpose">
         <h2 id="heading-purpose">Purpose</h2>
         <p>
@@ -30,7 +21,15 @@ const AboutTab = () => {
       <section aria-labelledby="section-development">
         <h2 id="section-development">Development and Coding</h2>
         <ul>
-          <li>John Henry Thompson</li>
+          <li>
+            <a
+              href="http://johnhenrythompson.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              John Henry Thompson
+            </a>
+          </li>
         </ul>
         <h3>Inspiration</h3>
         <ul>
@@ -59,9 +58,19 @@ const AboutTab = () => {
         </ul>
         <h3>Dedication</h3>
         <ul>
-          <li>For the Frontline Workers</li>
+          <li>For the Essential Workers</li>
         </ul>
       </section>
+      {/* <p>
+        Why and How this site is built:{' '}
+        <a
+          href="https://epvisual.com/covid19-document/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          COVID-19 Document
+        </a>
+      </p> */}
     </StyledDiv>
   );
 };
