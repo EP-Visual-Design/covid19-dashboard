@@ -101,8 +101,6 @@ Uses port 3002.
 
 ```bash
 cd ./express
-# install dependencies (one time only)
-yarn
 # start the dev server
 yarn start
 ```
