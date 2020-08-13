@@ -16,6 +16,10 @@ Visualization of COVID-19 statistics from
 - documentation:
   https://epvisual.com/covid19-document
 
+## Setup
+
+- [setup.md](./setup.md) : Setup instructions to run locally client and express server
+
 ## Folders
 
 - ./client : Browser app to view graphs of daily data

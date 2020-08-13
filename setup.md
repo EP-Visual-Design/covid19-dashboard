@@ -31,6 +31,10 @@ cd <your-covid19-repo>
 bin/install.sh
 ```
 
+## Updating Stats
+
+Pulling latest statistics from John Hopkins repo
+
 ```bash
 # Update COVID-19 repo from source
 cd <your-covid19-repo>/COVID-19-JHU
