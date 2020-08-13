@@ -42,9 +42,9 @@ const ReferencesTab = () => {
             {heading && heading}
             <a href={url} target="_blank" rel="noopener noreferrer">
               {anchor}
-            </a>
+            </a>{' '}
+            {quote}
           </p>
-          <blockquote>{quote}</blockquote>
         </div>
       ))}
     </StyledSection>
