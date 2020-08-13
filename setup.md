@@ -23,10 +23,12 @@ Set the following rules in VSCode settings:
 
 ## First time setup
 
+Only need to do once.
+
 ```bash
-# Create source data clone (do once)
+# Install components
 cd <your-covid19-repo>
-git clone https://github.com/CSSEGISandData/COVID-19 COVID-19-JHU
+bin/install.sh
 ```
 
 ```bash
@@ -35,11 +37,7 @@ cd <your-covid19-repo>/COVID-19-JHU
 git pull
 
 # Run processing script to update client/public/stats
-cd <your-covid19-repo>/express
-# Do once
-yarn
-#
-cd parse
+cd <your-covid19-repo>/express/parse
 #
 node aparse.js
 ```
@@ -51,8 +49,6 @@ Uses port 3000.
 
 ```bash
 cd <your-covid19-repo>/client
-# install dependencies (one time only)
-yarn
 # start the dev server
 yarn start
 ```
@@ -79,8 +75,6 @@ bin/pub-html.sh
 
 ```bash
 cd <your-covid19-repo>/docus
-# install dependencies (one time only)
-yarn
 # start the documentation server
 yarn start
 ```
